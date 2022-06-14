@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "zira.ai";
+option java_outer_classname = "Grpc_poc";
+option objc_class_prefix = "HLW";
+
+package zira.ai;
+
+service Grpc_pocService {
+  rpc send (Grpc_pocRequest) returns (Grpc_pocReply) {}
+}
+
+message Grpc_pocRequest {
+  string name = 1;
+}
+
+message Grpc_pocReply {
+  string message = 1;
+}
